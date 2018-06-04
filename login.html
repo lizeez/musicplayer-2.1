@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>登录</title>
+<link type="text/css" rel="stylesheet" href="css/login.css" /> 
+</head>
+<body>
+<a href="index.html"><img src="images/logo.png" class="top" /></a>
+<img src="images/login.png" class="left" />
+<div class="all">
+<div class="first">
+<span class="pas">登录</span>
+</div>
+<div class="second">
+<input type="text" placeholder="账号" class="number" name="user" onblur="oBlur_1()" onfocus="oFocus_1()"/><br />
+<p id="remind_1"></p>
+<input type="text"  placeholder="密码"  class="password" name="password" onblur="oBlur_2()" onfocus="oFocus_2()"/><br />
+<p id="remind_2"></p>
+<input type="button" value="登录"  class="ok"/>
+</div>
+<div class="third">
+<span><a href="register.html">注册新账户<a></span>
+</div>
+</div>
+<script src="js/common_form_test.js"></script>
+</body>
+</html>

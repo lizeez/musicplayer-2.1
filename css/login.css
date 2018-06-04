@@ -1,0 +1,141 @@
+body{
+background-color:#619ec2;
+background-position: 200px 200px;
+}
+
+*{
+padding: 0;margin: 0;
+
+}
+
+.top{
+width: 160px;
+height: 60px;
+position: absolute;
+top:5%;
+left: 10%;
+}
+
+
+.left{
+border:1px solid lightblue;
+width: 600px;
+height: 387px;
+position: absolute;
+top: 136px;
+left: 10%;
+}
+.all{
+border:1px solid lightblue;
+width: 335px;
+height: 387px;
+position: absolute;
+top: 136px;
+right: 10%;
+}
+
+.all .first .login,.all .first {
+width:167px;
+height: 50px;
+text-align: center;
+line-height: 50px;
+display: block;
+float: left;
+background-color: lightblue;
+font-family: "微软雅黑";
+color: gray;
+
+}
+.pas{
+width:334px;
+height: 50px;
+text-align: center;
+line-height: 50px;
+display: block;
+float: left;
+background-color: lightblue;
+font-family: "微软雅黑";
+color: gray;
+
+}
+.all .second .number{
+width: 284px;
+height: 35px;
+margin-top: 33px;
+margin-left: 17px;
+}
+
+.all .second .password{
+width: 284px;
+height: 35px;
+margin-top: 15px;
+margin-left: 17px;
+}
+
+.all .second .ok{
+width: 284px;
+height: 40px;
+margin-top: 17px;
+margin-left: 17px;
+border: 0;
+background-color: #1E90FF;
+font-size:larger;
+color: white;
+font-family: "微软雅黑";
+}
+
+.all .first{
+width: 335px;
+height:52px;
+}
+
+.all .second{
+width: 332px;
+height:290px;
+}
+
+.all .third{
+width: 222px;
+height:45px;
+   line-height: 45px;
+   padding-left: 110px;
+}
+
+.all .first .login:hover{
+color:black;
+}
+
+.all .first .pas:hover{
+color:black;
+}
+
+.all .second .bnext{
+width: 20px;
+height: 20px;
+margin-top: 10px;
+margin-left: 17px;
+}
+
+.all .second .tnext{
+display: block;
+width: 100px;
+height: 15px;
+margin-left: 45px;
+margin-top: -22px;
+font-size: small;
+
+}
+
+.all .third span a{
+font-size:smaller;
+color: black;
+font-family: "微软雅黑";
+}
+#remind_1,
+#remind_2 {
+    width: 76%;
+    margin: 0 auto 1px;
+    text-align: left;
+    font-size: .8em;
+    color: #f00;
+}

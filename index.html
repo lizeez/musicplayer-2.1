@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>听风</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- favicon图标 -->
+<link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="styles/style.css" media="screen" />
+<link rel="stylesheet" href="styles/media-queries.css" />
+<link rel="stylesheet" href="./flex-slider/flexslider.css" type="text/css" media="screen" />
+<link href="styles/prettyPhoto.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="styles/tipsy.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript" src="./scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./flex-slider/jquery.flexslider-min.js"></script>
+<script src="scripts/jquery.prettyPhoto.js" type="text/javascript"></script>
+<script src="scripts/jquery.tipsy.js" type="text/javascript"></script>
+<script src="scripts/jquery.knob.js" type="text/javascript"></script>
+<script type="text/javascript" src="./scripts/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="./scripts/jquery.smooth-scroll.min.js"></script>
+<script type="text/javascript" src="./scripts/waypoints.min.js"></script>
+<script type="text/javascript" src="./scripts/setup.js"></script>
+
+<!-- layer弹窗插件 -->
+<script src="plugns/layer/layer.js"></script>
+
+<!-- 播放器数据加载模块 -->
+<script src="js/ajax.js"></script>
+
+<!-- 播放器歌词解析模块 -->
+<script src="js/lyric.js"></script>
+
+<!-- 音乐列表配置 -->
+<script src="js/musicList.js"></script>
+
+<!-- 封装函数及ui交互模块 -->
+<script src="js/functions.js"></script>
+
+<!-- 播放器主体功能模块 -->
+<script src="js/player.js"></script>
+
+<!-- 滚动条美化插件 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!-- 背景模糊化插件 -->
+<script src="js/background-blur.min.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+  <!-- wrapper -->
+  <div id="sidebar">
+    <!-- logo --> 
+    <a href="#" id="logo"> <img src="./images/logo.png" alt="" /></a> 
+    <!-- navigation menu -->
+    <ul id="navigation">
+      <li><a href="#recommend" class="active">推荐</a></li>
+      <li><a href="#rank">排行榜</a></li>
+      <li><a href="#music">音乐馆</a></li>
+      <li><a href="login.html">我的音乐</a></li>
+      <li><a href="#list">播放列表</a></li>
+	  <li><span class="btn" data-action="search" title="点击搜索音乐">歌曲搜索</span></li>
+	  <li><a href="login.html">登录</a></li>
+    </ul>
+  </div>
+  <div id="container"> 
+    <!-- page container -->
+    <div class="page" id="recommend"> 
+      <!-- page recommend -->
+      <div class="page_content">
+        <div class="gf-slider"> 
+          <!-- slider -->
+          <ul class="slides">
+            <li> <img src="images/01.jpg" alt="" />       
+            </li>
+            <li> <img src="images/02.jpg" alt="" />
+            </li>
+            <li> <img src="images/03.jpg" alt="" />
+            </li>
+            <li> <img src="images/04.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+		<ul id="works_filter">
+          <li><a href="#" data-filter="*" class="selected">热门歌曲</a></li>
+          <li><a href="#" data-filter=".Chinese">华语</a></li>
+          <li><a href="#" data-filter=".EA">欧美</a></li>
+          <li><a href="#" data-filter=".ballad">民谣</a></li>
+        </ul>
+        <div class="clear"> </div>
+        <div id="works"> 
+          <!-- works --> 
+          <a  href="#list"> <img class="work Chinese" src="images/photos/01.jpg" alt="" /> </a><a  href="#list"> <img class="work EA" src="images/photos/03.jpg" alt="" /> </a><a  href="#list"> <img class="work ballad" src="images/photos/04.jpg" alt="" /> </a><a  href="#list"> <img class="work EA" src="images/photos/05.jpg" alt="" /> </a><a  href="#list"> <img class="work ballad" src="images/photos/06.jpg" alt="" /> </a><a  href="#list"> <img class="work Chinese" src="images/photos/07.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/08.jpg"> <img class="work EA" src="./images/photos/08.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/09.jpg"> <img class="work ballad" src="images/photos/09.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/10.jpg"> <img class="work Chinese" src="images/photos/10.jpg" alt="" /> </a> </div>
+        <div class="clear"> </div>
+      </div>
+    </div>
+    <div class="page" id="rank"> 
+      <!-- page rank -->
+      <h3 class="page_title"> 排行榜</h3>
+      <div class="page_content">
+      <ul id="works_filter">
+          <li><a href="#" data-filter=".rege" class="selected">热歌榜</a></li>
+          <li><a href="#" data-filter=".xinge">新歌榜</a></li>
+          <li><a href="#" data-filter=".biaosheng">飙升榜</a></li>
+          <li><a href="#" data-filter=".wangluo">网络榜</a></li>
+        </ul>
+        <div class="clear"> </div>
+        <div id="works"> 
+          <!-- works --> 
+        <div class="work rege">
+			<div class="list_title">  
+			<div class="no"></div>  
+			<div class="name">歌曲</div>  
+			<div class="singer">歌手</div>  
+			<div class="zhuanji">专辑</div>    
+			</div> 
+			<div class="listSong" id></div> 
+			</div>
+		<div class="work xinge">
+			<div class="list_title">  
+			<div class="no"></div>  
+			<div class="name">歌曲</div>  
+			<div class="singer">歌手</div>  
+			<div class="zhuanji">专辑</div>    
+			</div> 
+			<div class="listSong" id></div> 
+		</div>
+		<div class="work biaosheng">
+			<div class="list_title">  
+			<div class="no"></div>  
+			<div class="name">歌曲</div>  
+			<div class="singer">歌手</div>  
+			<div class="zhuanji">专辑</div>    
+			</div> 
+			<div class="listSong" id></div> 
+		</div>
+		<div class="work wangluo">
+			<div class="list_title">  
+			<div class="no"></div>  
+			<div class="name">歌曲</div>  
+			<div class="singer">歌手</div>  
+			<div class="zhuanji">专辑</div>    
+			</div> 
+			<div class="listSong" id></div> 
+		</div>
+		 </div>
+        <div class="clear"> </div>  
+      </div>
+    </div>
+    <div class="page" id="music"> 
+      <!-- page misic -->
+      <h3 class="page_title">音乐馆</h3>
+      <div class="page_content">
+        <ul id="works_filter">
+          <li><a href="#" data-filter="*" class="selected">全部</a></li>
+          <li><a href="#" data-filter=".css">分类</a></li>
+          <li><a href="#" data-filter=".html_php">歌手</a></li>
+        </ul>
+        <div class="clear"> </div>
+        <div id="works"> 
+          <!-- works --> 
+          <a rel="prettyPhoto[gallery]" href="images/photos/01.jpg"> <img class="work js" src="images/photos/01.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/03.jpg"> <img class="work css" src="images/photos/03.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/04.jpg"> <img class="work html_php" src="images/photos/04.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/05.jpg"> <img class="work html_php" src="images/photos/05.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/06.jpg"> <img class="work css" src="images/photos/06.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/07.jpg"> <img class="work js" src="images/photos/07.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/08.jpg"> <img class="work html_php" src="./images/photos/08.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/09.jpg"> <img class="work js" src="images/photos/09.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/10.jpg"> <img class="work html_php" src="images/photos/10.jpg" alt="" /> </a> </div>
+        <div class="clear"> </div>
+      </div>
+    </div>
+    <div class="page" id="my" height="600px"> 
+      <!-- my -->
+      <a href="login.html"><h3 class="page_title"> 我的音乐</h3><a>
+	  <div class="login" id="login">
+			<a href="login.html"><p>点击登录</p><a>
+	  </div>
+    </div>
+    <div class="page" id="list"> 
+      <!-- list -->
+      <h3 class="page_title"> 播放列表</h3>
+      <div class="page_content">
+		<!--音乐播放列表-->
+        <div id="main-list" class="music-list data-box"></div>  
+		<div class="clear"> </div>
+      </div>
+    </div>
+    <div class="footer">
+    </div>
+  </div>
+
+	<div class="bottom_fixed">
+	<a href="player.html">展开</a>
+		<div class="con-btn">
+            <a href="javascript:;" class="player-btn btn-prev" title="上一首"></a>
+            <a href="javascript:;" class="player-btn btn-play" title="暂停/继续"></a>
+            <a href="javascript:;" class="player-btn btn-next" title="下一首"></a>
+			<a href="javascript:;" class="player-btn btn-order" title="循环控制"></a>
+		</div>  <!--class="con-btn"-->
+        
+        <div class="vol">
+            <div class="quiet">
+                <a href="javascript:;" class="player-btn btn-quiet" title="静音"></a>
+            </div>
+            <div class="volume">
+                <div class="volume-box">  
+                    <div id="volume-progress" class="mkpgb-area"></div>
+                </div>
+            </div>
+        </div>  <!--class="footer"-->
+        
+        <div class="progress">
+            <div class="progress-box">  
+                <div id="music-progress" class="mkpgb-area"></div>
+            </div>
+        </div>  <!--class="progress"-->
+	</div>
+</div>
+<a class="gotop" href="#top">Top</a>
+
+<script type="text/javascript">
+ 	//Json数组  
+var music=[  
+    {"no":"01","name":"七月上","singer":"Jam","src":"audioFile/1.mp3","zhuanji":"七月上","length":"03:10","size":"2.9MB","image":"images/1.png","lyric":""},
+	{"no":"01","name":"七月上","singer":"Jam","src":"audioFile/1.mp3","zhuanji":"七月上","length":"03:10","size":"2.9MB","image":"images/1.png","lyric":""},
+	{"no":"01","name":"七月上","singer":"Jam","src":"audioFile/1.mp3","zhuanji":"七月上","length":"03:10","size":"2.9MB","image":"images/1.png","lyric":""},
+	{"no":"01","name":"七月上","singer":"Jam","src":"audioFile/1.mp3","zhuanji":"七月上","length":"03:10","size":"2.9MB","image":"images/1.png","lyric":""},
+	{"no":"01","name":"七月上","singer":"Jam","src":"audioFile/1.mp3","zhuanji":"七月上","length":"03:10","size":"2.9MB","image":"images/1.png","lyric":""},	
+	{"no":"01","name":"七月上","singer":"Jam","src":"audioFile/1.mp3","zhuanji":"七月上","length":"03:10","size":"2.9MB","image":"images/1.png","lyric":""},
+	{"no":"01","name":"七月上","singer":"Jam","src":"audioFile/1.mp3","zhuanji":"七月上","length":"03:10","size":"2.9MB","image":"images/1.png","lyric":""},
+	{"no":"01","name":"七月上","singer":"Jam","src":"audioFile/1.mp3","zhuanji":"七月上","length":"03:10","size":"2.9MB","image":"images/1.png","lyric":""},
+    {"no":"02","name":"奇妙能力歌","singer":"陈粒","src":"audioFile/2.mp3","zhuanji":"热门华语","length":"04:13","size":"9.7MB","image":"images/2.png","lyric":""},  
+    {"no":"02","name":"奇妙能力歌","singer":"陈粒","src":"audioFile/2.mp3","zhuanji":"热门华语","length":"04:13","size":"9.7MB","image":"images/2.png","lyric":""},  
+    {"no":"02","name":"奇妙能力歌","singer":"陈粒","src":"audioFile/2.mp3","zhuanji":"热门华语","length":"04:13","size":"9.7MB","image":"images/2.png","lyric":""},  
+    {"no":"02","name":"奇妙能力歌","singer":"陈粒","src":"audioFile/2.mp3","zhuanji":"热门华语","length":"04:13","size":"9.7MB","image":"images/2.png","lyric":""},  
+    {"no":"02","name":"奇妙能力歌","singer":"陈粒","src":"audioFile/2.mp3","zhuanji":"热门华语","length":"04:13","size":"9.7MB","image":"images/2.png","lyric":""},  
+    {"no":"02","name":"奇妙能力歌","singer":"陈粒","src":"audioFile/2.mp3","zhuanji":"热门华语","length":"04:13","size":"9.7MB","image":"images/2.png","lyric":""}];  
+//解析Json格式的数组  
+var oMusic=eval(music);         
+//获取相应的div对象 
+for(var j=0; j<5; j++)
+{
+var oListSong=document.getElementsByClassName("listSong")[j];  
+//循环遍历列表利用innerHTML的方法动态生成  
+for(var i=0;i<oMusic.length;i++){  
+        //设置列表  
+        oListSong.innerHTML+="<div><span class='no'>"+j+"</span><span class='name'>"+oMusic[i].name+"</span><span class='singer'>"+oMusic[i].singer+"</span><span class='zhuanji'>"+oMusic[i].zhuanji+"</span></div>";  
+    }  
+}
+</script>
+
+</body>
+</html>
